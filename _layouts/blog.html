@@ -1,14 +1,14 @@
 ---
 layout: base
-
 ---
-<section class="usa-grid usa-section blog-section">
+<section class="grid-container usa-section margin-bottom-4">
     <h1 class="page-heading">Blog</h1>
     {% for post in paginator.posts %}
-    <div class="usa-grid  blog-section">
-        <div class="usa-width-one-third blog-list-image"><img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}"   title="{{ post.title }}"></div>
-        <div class="usa-width-two-thirds">
-      <ul>
+    <div class="grid-row grid-gap margin-bottom-4">
+      <div class="tablet:grid-col-4 margin-bottom-2"><img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}"
+        title="{{ post.title }}"></div>
+      <div class="tablet:grid-col-8">
+        <ul class="add-list-reset">
           <li>
             <h3>
               <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
@@ -17,28 +17,19 @@ layout: base
             {{ post.date | date_to_long_string }}
             {{ post.excerpt | truncatewords: 35 }}
           </li>
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
-        {% endfor %}
-
+    {% endfor %}
+  
   {% if paginator.total_pages > 1 %}
-    <ul>
     {% if paginator.previous_page %}
-      <li>
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-      </li>
+      <a class="margin-right-2" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
     {% endif %}
-  {% if paginator.next_page %}
-    <li>
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-    </li>
+    {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+    {% endif %} 
   {% endif %}
-    </ul>
-{% endif %}
-
 </section>
-
-
 
 {% include contact.html %}

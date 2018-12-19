@@ -1,5 +1,4 @@
----
----
+
 
 [
   {% for nav in site.data.navbar.assigned %}

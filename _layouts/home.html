@@ -44,31 +44,31 @@ layout: base
 {% comment %}
 Blog Section
 {% endcomment %}
-<section class="usa-grid usa-section">
+<section class="grid-container usa-section">
     <h1 class="page-heading">
       <a href="{{ site.baseurl }}/blog/">Blog</a>
     </h1>
     {% for post in site.posts limit: 3 %}
-    <div class="usa-grid  blog-section">
-        <div class="usa-width-one-third blog-list-image"><img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}"   title="{{ post.title }}"></div>
-        <div class="usa-width-two-thirds">
-      <ul class="blog-list-body">
-          <li>
-            <h3>
-              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            </h3>
-            By: {{ post.author}}</br>
-            {{ post.date | date_to_long_string }}
-            {{ post.excerpt | truncatewords: 35 }}
-          </li>
-      </ul>
+    <div class="grid-row grid-gap margin-bottom-4">
+       <div class="tablet:grid-col-4 blog-list-image"><img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}"   title="{{ post.title }}"></div>
+       <div class="tablet:grid-col-8">
+         <ul class="add-list-reset">
+            <li>
+              <h3>
+                <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+              </h3>
+              By: {{ post.author}}</br>
+              {{ post.date | date_to_long_string }}
+              {{ post.excerpt | truncatewords: 35 }}
+            </li>
+         </ul>
+      </div>
     </div>
-  </div>
         {% endfor %}
-<a class="card-read" href="{{ site.baseurl }}/blog/">
-        more blog stories
-        <span class="usa-sr-only">about {{ page.title }}</span>
-      </a>
+       <a href="{{ site.baseurl }}/blog/">
+         more blog stories
+         <span class="usa-sr-only">about {{ page.title }}</span>
+       </a>
 </section>
 
 {% include contact.html %}

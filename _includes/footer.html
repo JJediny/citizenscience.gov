@@ -1,44 +1,74 @@
 <footer class="usa-footer usa-footer-medium" role="contentinfo">
-  <div class="usa-footer-secondary_section">
-    <div class="usa-grid">
-      <div class="usa-footer-logo usa-width-one-half">
-        {% if site.footer.image %}
-        <a href="https://www.gsa.gov"  target="blank" rel="noopener">
-          <img class="usa-footer-logo-img" src="{{ site.footer.image | prepend: site.baseurl }}" alt=" GSA Logo image">
-        </a>
-        {% endif %}
-        <a href="https://www.citizenscience.gov">
-          <img class="footer-logo" src="{{ site.baseurl }}/assets/img/logo-main_transparent.png" alt="www.citizenscience.gov">
-        </a>
-        {% if site.footer.text %}
-          <p>{{ site.footer.text }}</p>
-        {% endif %}
+  
+    <div class="grid-container usa-footer-return-to-top">
+        <a href="#">Return to top</a>
+      </div>
+      <div class="usa-footer-primary-section">
+        <nav class="usa-footer-nav">
+          <ul class="add-list-reset grid-row grid-gap">
+            <li class="tablet-lg:grid-col-4 desktop:grid-col-2 usa-footer-primary-content">
+              <a class="usa-footer-primary-link" href="{{ site.url }}">Home</a>
+            </li>
+            <li class="tablet:grid-col-4 desktop:grid-col-2 usa-footer-primary-content">
+              <a class="usa-footer-primary-link" href="{{ site.baseurl }}/catalog">Catalog</a>
+            </li>
+            <li class="tablet:grid-col-4 desktop:grid-col-2 usa-footer-primary-content">
+              <a class="usa-footer-primary-link" href="{{ site.baseurl }}/toolkit">Toolkit</a>
+            </li>
+            <li class="tablet:grid-col-4 desktop:grid-col-2 usa-footer-primary-content">
+              <a class="usa-footer-primary-link" href="{{ site.baseurl }}/about/community-of-practice">Communities</a>
+            </li>
+            <li class="tablet:grid-col-4 desktop:grid-col-2 usa-footer-primary-content">
+              <a class="usa-footer-primary-link" href="{{ site.baseurl }}/blog">Blog</a>
+            </li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="usa-footer-contact-links usa-width-one-half">
-          {% if site.footer.contact.twitter %}
-          <a class="usa-link-twitter" href="https://twitter.com/FedCitSci?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor/{{ twitter }}" target="blank" rel="noopener"><span>Twitter</span></a>
-          {% endif %}
-          {% if site.footer.contact.facebook %}
-          <a class="usa-link-facebook" href="https://facebook.com/{{ facebook }}"><span>Facebook</span></a>
-          {% endif %}
-          {% if site.footer.contact.youtube %}
-          <a class="usa-link-youtube" href="https://youtube.com/{{ youtube }}"><span>YouTube</span></a>
-          {% endif %}
-          {% if site.footer.contact.rss %}
-          <a class="usa-link-rss" href="{{ rss }}"><span>RSS feed</span></a>
-          {% endif %}
-        <address>
-          {% if site.footer.contact.name %}
-            <h3 class="usa-footer-contact-heading">{{ site.footer.contact.name }}</h3>
-          {% endif %}
-          {% if site.footer.contact.phonenumber %}
-            <p><a href="tel:{{ site.footer.contact.phonenumber }}">{{ site.footer.contact.phonenumber }}</a></p>
-          {% endif %}
-          <p><a href="mailto:{{ site.footer.contact.email }}">{{ site.footer.contact.email }}</a></p>
-        </address>
-
+    <div class="usa-footer-secondary-section">
+        <div class="grid-container">
+          <div class="grid-row grid-gap">
+            <div class="usa-footer-logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+              <div class="mobile-lg:grid-col-auto">
+                <img class="usa-footer-logo-img" src="/assets/img/gsa-logo-dark.jpg" alt="">
+              </div>
+              <div class="desktop:grid-col-8">
+                  <a href="{{ site.url }}">
+                    <img class="" src="{{ site.baseurl }}/assets/img/logo-main_transparent.png" alt="www.citizenscience.gov">
+                  </a>
+              </div>
+            </div>
+            <div class="usa-footer-contact-links mobile-lg:grid-col-6">
+              <div class="usa-footer-social-links grid-row grid-gap-1">
+                <div class="grid-col-auto">
+                  <a class="usa-link-twitter" href="https://twitter.com/FedCitSci?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                    <span>Twitter</span>
+                  </a>
+                </div>
+                <div class="grid-col-auto">
+                  <a class="usa-link-youtube" href="javascript:void(0);">
+                    <span>YouTube</span>
+                  </a>
+                </div>
+                <div class="grid-col-auto">
+                  <a class="usa-link-rss" href="javascript:void(0);">
+                    <span>RSS</span>
+                  </a>
+                </div>
+              </div>
+              <h3 class="usa-footer-contact-heading">Program Contact</h3>
+              <address class="usa-footer-address">
+                <div class="usa-footer-contact_info grid-row grid-gap">
+                  <div class="grid-col-auto">
+                    <a href="mailto:citizenscience@gsa.gov">CitizenScience@gsa.gov</a>
+                  </div>
+                </div>
+              </address>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</footer>
+  
+  
+  
+  

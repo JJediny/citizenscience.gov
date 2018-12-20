@@ -32,7 +32,7 @@ colors:
   footer:
     primary-background: '#f1f1f1'
     secondary-background: '#d6d7d9'
-    text: '#212121'
+    text: '#205493'
 
 analytics:
   google:

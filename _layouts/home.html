@@ -19,16 +19,16 @@ layout: base
 
 {% if page.banner-heading %}
 <section class="usa-section banner tagline">
-  <div class="usa-grid">
-    <div class="usa-width-one-whole usa-end-row">
+  <div class="grid-container">
+    <div class="">
       <h2>{{ page.banner-heading }}</h2>
       {% if page.banner-text %}
-        <p>{{ page.banner-text }}
-          <a class="card-read" href="{{ site.baseurl }}/about/">
+        <p class="grid-row">{{ page.banner-text }} </p>
+          <a class="display-flex" href="{{ site.baseurl }}/about/">
         Read more
         <span class="usa-sr-only">about {{ project.title }}</span>
       </a>
-        </p>
+       
       {% endif %}
       {% if page.banner-button-text %}
       <div class="center-content">

@@ -1,8 +1,8 @@
 <section class="grid-container usa-section">
- <div class="grid-row grid-gap">
+ <div class="grid-row">
   {% for project in site.projects %}
     {% unless project.featured %}
-      <article class="tablet:grid-col shadow-1">
+      <article class="desktop:grid-col border border-base-light display-flex flex-column margin-x-1 margin-bottom-3">
         <a href="{{ project.link-out }}">
          <div class="card-image"
            style="background-image: url(
@@ -21,7 +21,7 @@
           </h3>
           <p class="card-summary">{{ project.description }}</p>
         </div>
-        <a class="card-read" href="{{ project.read-more-link }}">
+        <a class="card-read padding-bottom-3" href="{{ project.read-more-link }}">
           Read more
           <span class="usa-sr-only">about {{ project.title }}</span>
         </a>
